@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB06BA2E9169CD5DD94B1C63 /* AgenticOffingerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833204C02E4A2D265C9BFA1D /* AgenticOffingerApp.swift */; };
+		2D83C94409074561D0B0A852 /* BTLxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2FA66367D81382DF9544E /* BTLxModel.swift */; };
+		2B862C5FE2592A6E18F6D2E2 /* BTLxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC667FA368176D4C1F49B62 /* BTLxParser.swift */; };
+		1530B1A59148FB3BCB7829BA /* LayerClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DEF1E36E68810B99846A60 /* LayerClassifier.swift */; };
+		9D316E9E62379E29E878D16D /* GeometryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139EDDA19E4E88A8F7DFD08A /* GeometryFactory.swift */; };
+		69FB065E1E231FC51FEF4EFF /* ModelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77892EC7D67C5218ACC5454A /* ModelScene.swift */; };
+		1BBF53C8DB6CD7EFEADA3CDB /* ModelSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471FA0E7A3573E45F16397AA /* ModelSceneView.swift */; };
+		4DBDAC882170BD3A0A52CE0B /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E737276D76579764EBF8016 /* AppModel.swift */; };
+		72FDB3E318E2261523F4CB33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90102ED8737B20AA6553752B /* ContentView.swift */; };
+		98442CCDD557A1611FCCC632 /* LayerSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0380DEDB58B9C2EC064153F3 /* LayerSidebar.swift */; };
+		745F83FC2E97259C3B4F6382 /* PartInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D8FA9031ED960FE4E04959 /* PartInspector.swift */; };
+		DE51FB002A8275FD1B242A6B /* RoWaPla Musterwand V3.btlx in Resources */ = {isa = PBXBuildFile; fileRef = E56CB1EE5B4A43D18D744F71 /* RoWaPla Musterwand V3.btlx */; };
+		B8AC1D188E57AAA305899A40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B04B2273026590A440D27C9 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		38A007151ABE87CC01A5B6E9 /* AgenticOffinger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgenticOffinger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		833204C02E4A2D265C9BFA1D /* AgenticOffingerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AgenticOffingerApp.swift"; sourceTree = "<group>"; };
+		67F2FA66367D81382DF9544E /* BTLxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BTLxModel.swift"; sourceTree = "<group>"; };
+		AAC667FA368176D4C1F49B62 /* BTLxParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BTLxParser.swift"; sourceTree = "<group>"; };
+		C1DEF1E36E68810B99846A60 /* LayerClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayerClassifier.swift"; sourceTree = "<group>"; };
+		139EDDA19E4E88A8F7DFD08A /* GeometryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryFactory.swift"; sourceTree = "<group>"; };
+		77892EC7D67C5218ACC5454A /* ModelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelScene.swift"; sourceTree = "<group>"; };
+		471FA0E7A3573E45F16397AA /* ModelSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelSceneView.swift"; sourceTree = "<group>"; };
+		5E737276D76579764EBF8016 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModel.swift"; sourceTree = "<group>"; };
+		90102ED8737B20AA6553752B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
+		0380DEDB58B9C2EC064153F3 /* LayerSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayerSidebar.swift"; sourceTree = "<group>"; };
+		47D8FA9031ED960FE4E04959 /* PartInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PartInspector.swift"; sourceTree = "<group>"; };
+		E56CB1EE5B4A43D18D744F71 /* RoWaPla Musterwand V3.btlx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "RoWaPla Musterwand V3.btlx"; sourceTree = "<group>"; };
+		5B04B2273026590A440D27C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets.xcassets"; sourceTree = "<group>"; };
+		10D4C7A4BBFBD503FEF85D2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0451DC018FBE9C14ACB0B460 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26920DEF6AC11BF8F7B4ECC5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				ADAE9D5B4891B1B9C723592C /* AgenticOffinger */,
+				323F84FDFCA652FDFDDF775A /* Support */,
+				277FC3C01BCCCCF785B33F5C /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		ADAE9D5B4891B1B9C723592C /* AgenticOffinger */ = {
+			isa = PBXGroup;
+			children = (
+				833204C02E4A2D265C9BFA1D /* AgenticOffingerApp.swift */,
+				A134F750C4BF1CCBE44497E8 /* Model */,
+				26CA0543747786D656B3202E /* Scene */,
+				3B2A6BD2B816D4A3057601B1 /* UI */,
+				847FC6BBDD64799C76E8CF65 /* Resources */,
+				5B04B2273026590A440D27C9 /* Assets.xcassets */,
+			);
+			path = AgenticOffinger;
+			sourceTree = "<group>";
+		};
+		A134F750C4BF1CCBE44497E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				67F2FA66367D81382DF9544E /* BTLxModel.swift */,
+				AAC667FA368176D4C1F49B62 /* BTLxParser.swift */,
+				C1DEF1E36E68810B99846A60 /* LayerClassifier.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		26CA0543747786D656B3202E /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				139EDDA19E4E88A8F7DFD08A /* GeometryFactory.swift */,
+				77892EC7D67C5218ACC5454A /* ModelScene.swift */,
+				471FA0E7A3573E45F16397AA /* ModelSceneView.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		3B2A6BD2B816D4A3057601B1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5E737276D76579764EBF8016 /* AppModel.swift */,
+				90102ED8737B20AA6553752B /* ContentView.swift */,
+				0380DEDB58B9C2EC064153F3 /* LayerSidebar.swift */,
+				47D8FA9031ED960FE4E04959 /* PartInspector.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		847FC6BBDD64799C76E8CF65 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E56CB1EE5B4A43D18D744F71 /* RoWaPla Musterwand V3.btlx */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		323F84FDFCA652FDFDDF775A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				10D4C7A4BBFBD503FEF85D2B /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		277FC3C01BCCCCF785B33F5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38A007151ABE87CC01A5B6E9 /* AgenticOffinger.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E8A3AD980EC179856012B7E /* AgenticOffinger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AB09DEFCAE8536578188292 /* Build configuration list for PBXNativeTarget "AgenticOffinger" */;
+			buildPhases = (
+				A57AD5146E5B760E0D4C14F6 /* Sources */,
+				0451DC018FBE9C14ACB0B460 /* Frameworks */,
+				F561285BDFACABA93339CA5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AgenticOffinger;
+			productName = AgenticOffinger;
+			productReference = 38A007151ABE87CC01A5B6E9 /* AgenticOffinger.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98F54143AB4E86B28C3AFEE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					0E8A3AD980EC179856012B7E = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = F84498CD9E870EE76F290811 /* Build configuration list for PBXProject "AgenticOffinger" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				de,
+				Base,
+			);
+			mainGroup = 26920DEF6AC11BF8F7B4ECC5;
+			productRefGroup = 277FC3C01BCCCCF785B33F5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E8A3AD980EC179856012B7E /* AgenticOffinger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F561285BDFACABA93339CA5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE51FB002A8275FD1B242A6B /* RoWaPla Musterwand V3.btlx in Resources */,
+				B8AC1D188E57AAA305899A40 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A57AD5146E5B760E0D4C14F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB06BA2E9169CD5DD94B1C63 /* AgenticOffingerApp.swift in Sources */,
+				2D83C94409074561D0B0A852 /* BTLxModel.swift in Sources */,
+				2B862C5FE2592A6E18F6D2E2 /* BTLxParser.swift in Sources */,
+				1530B1A59148FB3BCB7829BA /* LayerClassifier.swift in Sources */,
+				9D316E9E62379E29E878D16D /* GeometryFactory.swift in Sources */,
+				69FB065E1E231FC51FEF4EFF /* ModelScene.swift in Sources */,
+				1BBF53C8DB6CD7EFEADA3CDB /* ModelSceneView.swift in Sources */,
+				4DBDAC882170BD3A0A52CE0B /* AppModel.swift in Sources */,
+				72FDB3E318E2261523F4CB33 /* ContentView.swift in Sources */,
+				98442CCDD557A1611FCCC632 /* LayerSidebar.swift in Sources */,
+				745F83FC2E97259C3B4F6382 /* PartInspector.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		920C57D0DA386BF254949DF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DB9D43B9A41A7AF4CFA1BF4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B52D0FFB021E8F69445DE3D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Support/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Agentic Offinger";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.avoffinger.AgenticOffinger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		777513FA364619292C6CE7C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Support/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Agentic Offinger";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.avoffinger.AgenticOffinger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F84498CD9E870EE76F290811 /* Build configuration list for PBXProject "AgenticOffinger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				920C57D0DA386BF254949DF9 /* Debug */,
+				DB9D43B9A41A7AF4CFA1BF4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AB09DEFCAE8536578188292 /* Build configuration list for PBXNativeTarget "AgenticOffinger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B52D0FFB021E8F69445DE3D1 /* Debug */,
+				777513FA364619292C6CE7C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+}
