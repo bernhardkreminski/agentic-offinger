@@ -11,6 +11,7 @@
 		2D83C94409074561D0B0A852 /* BTLxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F2FA66367D81382DF9544E /* BTLxModel.swift */; };
 		2B862C5FE2592A6E18F6D2E2 /* BTLxParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC667FA368176D4C1F49B62 /* BTLxParser.swift */; };
 		1530B1A59148FB3BCB7829BA /* LayerClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DEF1E36E68810B99846A60 /* LayerClassifier.swift */; };
+		98FF2D5E33BD9BD4B1DF8D19 /* DimensionOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F481DEE37FBCB1F2A9D85 /* DimensionOverlay.swift */; };
 		9D316E9E62379E29E878D16D /* GeometryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139EDDA19E4E88A8F7DFD08A /* GeometryFactory.swift */; };
 		69FB065E1E231FC51FEF4EFF /* ModelScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77892EC7D67C5218ACC5454A /* ModelScene.swift */; };
 		1BBF53C8DB6CD7EFEADA3CDB /* ModelSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471FA0E7A3573E45F16397AA /* ModelSceneView.swift */; };
@@ -28,6 +29,7 @@
 		67F2FA66367D81382DF9544E /* BTLxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BTLxModel.swift"; sourceTree = "<group>"; };
 		AAC667FA368176D4C1F49B62 /* BTLxParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BTLxParser.swift"; sourceTree = "<group>"; };
 		C1DEF1E36E68810B99846A60 /* LayerClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayerClassifier.swift"; sourceTree = "<group>"; };
+		5D9F481DEE37FBCB1F2A9D85 /* DimensionOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimensionOverlay.swift; sourceTree = "<group>"; };
 		139EDDA19E4E88A8F7DFD08A /* GeometryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeometryFactory.swift"; sourceTree = "<group>"; };
 		77892EC7D67C5218ACC5454A /* ModelScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelScene.swift"; sourceTree = "<group>"; };
 		471FA0E7A3573E45F16397AA /* ModelSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelSceneView.swift"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		26CA0543747786D656B3202E /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				5D9F481DEE37FBCB1F2A9D85 /* DimensionOverlay.swift */,
 				139EDDA19E4E88A8F7DFD08A /* GeometryFactory.swift */,
 				77892EC7D67C5218ACC5454A /* ModelScene.swift */,
 				471FA0E7A3573E45F16397AA /* ModelSceneView.swift */,
@@ -204,6 +207,7 @@
 				2D83C94409074561D0B0A852 /* BTLxModel.swift in Sources */,
 				2B862C5FE2592A6E18F6D2E2 /* BTLxParser.swift in Sources */,
 				1530B1A59148FB3BCB7829BA /* LayerClassifier.swift in Sources */,
+				98FF2D5E33BD9BD4B1DF8D19 /* DimensionOverlay.swift in Sources */,
 				9D316E9E62379E29E878D16D /* GeometryFactory.swift in Sources */,
 				69FB065E1E231FC51FEF4EFF /* ModelScene.swift in Sources */,
 				1BBF53C8DB6CD7EFEADA3CDB /* ModelSceneView.swift in Sources */,

@@ -218,6 +218,8 @@ private struct DisplayOptionsCard: View {
         VStack(alignment: .leading, spacing: 10) {
             Toggle("Kanten", isOn: $model.display.showEdges)
             Toggle("Ausgeblendete als Geist", isOn: $model.display.ghostHiddenLayers)
+            Toggle("Bemaßung", isOn: Binding(get: { model.display.showDimensions },
+                                             set: { model.setDimensions($0) }))
             VStack(alignment: .leading, spacing: 2) {
                 Text("Schichten trennen")
                     .font(.caption)

@@ -131,6 +131,12 @@ final class AppModel {
 
     // MARK: - Camera
 
+    /// Switching dimensioning changes how much space the drawing needs, so refit.
+    func setDimensions(_ enabled: Bool) {
+        display.showDimensions = enabled
+        frameRequest += 1
+    }
+
     func apply(preset: ViewPreset) {
         self.preset = preset
         frameRequest += 1

@@ -77,7 +77,7 @@ struct ModelSceneView: UIViewRepresentable {
             guard let view, let modelScene else { return }
             let point = recogniser.location(in: view)
             let options: [SCNHitTestOption: Any] = [
-                .searchMode: SCNHitTestSearchMode.closest.rawValue,
+                .searchMode: SCNHitTestSearchMode.all.rawValue,
                 .ignoreHiddenNodes: true,
                 .boundingBoxOnly: false
             ]
@@ -91,53 +91,60 @@ struct ModelSceneView: UIViewRepresentable {
             onPick(nil)
         }
 
-        /// Point the camera along the preset direction, then dolly until the visible
-        /// parts fill the viewport.
+        /// Point the camera along the preset direction and dolly it back until the
+        /// visible content fits.
+        ///
+        /// `SCNCameraController.frameNodes` is not used: it reacts unpredictably to the
+        /// flat, zero-depth text nodes of the dimension overlay, so the distance is
+        /// derived from the content's bounding sphere and the camera's field of view.
         func move(to preset: ViewPreset, animated: Bool) {
-            guard let view, let modelScene, let camera = view.pointOfView else { return }
+            guard let view, let modelScene, let camera = view.pointOfView,
+                  let lens = camera.camera else { return }
 
-            let targets = modelScene.allPartNodes.filter { !$0.isHidden }
+            let targets = modelScene.framingNodes.filter { !$0.isHidden }
             let nodes = targets.isEmpty ? modelScene.allPartNodes : targets
+            let (centre, radius) = boundingSphere(of: nodes)
 
-            let radius = max(boundingRadius(of: nodes), 0.5)
-            camera.simdPosition = preset.direction * radius * 3.2
-            camera.simdOrientation = simd_quatf(lookAt: -preset.direction, up: preset.up)
+            let halfAngle = Float(lens.fieldOfView) * .pi / 360
+            let distance = max(radius / max(sin(halfAngle), 0.05) * 1.12, 0.5)
 
-            let controller = view.defaultCameraController
-            controller.target = SCNVector3Zero
+            // The target has to be assigned first: setting it re-aims the camera from the
+            // controller's own state, which would otherwise overwrite the preset orientation.
+            view.defaultCameraController.target = SCNVector3(centre.x, centre.y, centre.z)
 
-            func fit() {
-                controller.frameNodes(nodes)
-                // frameNodes fits tight to the bounds; back off so the model does not
-                // touch the viewport edges or slide under the sidebar.
-                let target = simd_float3(controller.target)
-                camera.simdPosition = target + (camera.simdPosition - target) * 1.22
+            func place() {
+                camera.simdPosition = centre + preset.direction * distance
+                camera.simdOrientation = simd_quatf(lookAt: -preset.direction, up: preset.up)
             }
 
             if animated {
                 SCNTransaction.begin()
                 SCNTransaction.animationDuration = 0.35
-                fit()
+                place()
                 SCNTransaction.commit()
             } else {
-                fit()
+                place()
             }
             view.setNeedsDisplay()
         }
 
-        private func boundingRadius(of nodes: [SCNNode]) -> Float {
+        /// World-space centre and radius of the given nodes, including their own geometry
+        /// only — the overlay is passed in already flattened to its leaf nodes.
+        private func boundingSphere(of nodes: [SCNNode]) -> (centre: SIMD3<Float>, radius: Float) {
             var minP = SIMD3<Float>(repeating: .greatestFiniteMagnitude)
             var maxP = SIMD3<Float>(repeating: -.greatestFiniteMagnitude)
             for node in nodes {
                 let (localMin, localMax) = node.boundingBox
-                for corner in Self.corners(simd_float3(localMin), simd_float3(localMax)) {
+                let lo = simd_float3(localMin), hi = simd_float3(localMax)
+                guard lo.x <= hi.x else { continue }
+                for corner in Self.corners(lo, hi) {
                     let world = node.simdConvertPosition(corner, to: nil)
                     minP = simd_min(minP, world)
                     maxP = simd_max(maxP, world)
                 }
             }
-            guard minP.x <= maxP.x else { return 1 }
-            return simd_length(maxP - minP) / 2
+            guard minP.x <= maxP.x else { return (.zero, 1) }
+            return ((minP + maxP) / 2, simd_length(maxP - minP) / 2)
         }
 
         private static func corners(_ lo: SIMD3<Float>, _ hi: SIMD3<Float>) -> [SIMD3<Float>] {

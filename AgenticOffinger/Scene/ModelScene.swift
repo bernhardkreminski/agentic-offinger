@@ -10,6 +10,8 @@ struct DisplayState: Equatable {
     var showEdges = true
     /// Draw switched-off layers as faint ghosts instead of hiding them outright.
     var ghostHiddenLayers = false
+    /// Overlay the shop-drawing dimension chains and part labels.
+    var showDimensions = false
     /// 0 = assembled, 1 = layers pulled apart along the build-up normal.
     var explode: Double = 0
 }
@@ -65,6 +67,8 @@ final class ModelScene {
     private var partNodes: [Int: SCNNode] = [:]
     private var edgeNodes: [Int: SCNNode] = [:]
     private var layerOfPart: [Int: String] = [:]
+    private var dimensionNode: SCNNode?
+    private var dimensionKey: String?
 
     /// Metres per millimetre.
     private static let unitScale: Float = 0.001
@@ -78,6 +82,17 @@ final class ModelScene {
 
     /// All part nodes, for camera framing.
     var allPartNodes: [SCNNode] { Array(partNodes.values) }
+
+    /// What the camera should frame: the parts plus the dimension drawing when it is on,
+    /// so switching dimensioning on does not push the chains off screen.
+    var framingNodes: [SCNNode] {
+        var nodes = allPartNodes
+        // The overlay root carries no geometry itself, so frame its children.
+        if let dimensionNode, !dimensionNode.isHidden {
+            nodes.append(contentsOf: dimensionNode.childNodes)
+        }
+        return nodes
+    }
 
     func nodes(forLayers layers: Set<String>) -> [SCNNode] {
         partNodes.compactMap { id, node in
@@ -219,6 +234,26 @@ final class ModelScene {
             }
             node.simdPosition = SIMD3<Float>(part.origin + offset)
         }
+
+        updateDimensions(state)
+    }
+
+    /// The chains describe the assembled element, so they are rebuilt only when the set
+    /// of visible layers changes — not on every selection or slider move.
+    private func updateDimensions(_ state: DisplayState) {
+        guard state.showDimensions else {
+            dimensionNode?.isHidden = true
+            return
+        }
+        let key = state.visibleLayers.sorted().joined(separator: ",")
+        if key != dimensionKey || dimensionNode == nil {
+            dimensionNode?.removeFromParentNode()
+            let node = DimensionOverlay.make(document: document, visibleLayers: state.visibleLayers)
+            centeringNode.addChildNode(node)
+            dimensionNode = node
+            dimensionKey = key
+        }
+        dimensionNode?.isHidden = false
     }
 
     /// The part behind a tap, or nil when the user tapped empty space.
